@@ -53,6 +53,20 @@ and RGB values are shortened for readability (`TMAG5253 A01…A18`,
 `WL-ICLED A01…A18`, and corresponding `B` channels); the exact MPNs remain
 defined by the selected symbols, footprints, and this document.
 
+## Wiring and readability convention
+
+The schematic now follows the style of the earlier Kaboard reference design:
+
+- local power/charger/regulator paths are drawn with physical orthogonal wires;
+- Hall sensor supply, ground, and exposed-pad connections use local buses;
+- each RGB row has physical DIN→DOUT links and local VDD/VSS buses;
+- net labels are retained at block boundaries, for long-distance MCU/radio
+  signals, and for each individual ADC channel rather than drawing page-wide
+  wire crossings.
+
+This keeps the electrical connectivity explicit where a human is likely to
+debug it, while avoiding a single-page wire bundle for repeated channels.
+
 ## Release blockers
 
 The electrical baseline must not be treated as a PCB-release package until the
