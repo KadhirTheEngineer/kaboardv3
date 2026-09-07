@@ -1,0 +1,486 @@
+# Kaboard — Hardware Design Handoff
+
+## Project goal
+
+Design a custom, high-performance, wireless, split Hall-effect keyboard in KiCad 10. The intended board has 36 keys total, 18 per half, using low-profile Gateron magnetic switches.
+
+The design philosophy is to integrate proven circuits and existing reference designs rather than inventing unverified electronics. Every component, pin assignment, footprint, and electrical assumption must be checked against official datasheets and reference designs before the schematic is considered final.
+
+The immediate task is to finish the hardware schematic and pin assignments. Do not begin PCB routing or invent missing design decisions.
+
+## 1. Overall architecture
+
+Each keyboard half is completely independent.
+
+* 18 Hall-effect keys per half.
+* Each half has its own battery, charger, STM32, nRF52840 radio module, and USB-C charging port.
+* No electrical connection between halves.
+* No inter-half cable, power sharing, or wired communication.
+* Each half communicates wirelessly with a receiver/dongle.
+* The receiver presents the keyboard to the host through USB HID.
+* Exact RF protocol, receiver architecture, and synchronization between halves are not yet finalized.
+
+Each half contains two MCUs:
+
+**STM32G431RBT6**
+
+* Hall ADC acquisition.
+* Sensor calibration and filtering.
+* Key position calculation.
+* Actuation and rapid-trigger logic.
+* Produces the latest processed key-state snapshot.
+
+**nRF52840 module**
+
+* Wireless communication.
+* RF scheduling and protocol.
+* Communication with the receiver.
+* Receives processed key states from the STM32.
+* Battery/status reporting and wireless management.
+
+Do not move Hall processing to the nRF or assume the nRF needs all 18 raw ADC values for normal operation.
+
+## 2. USB-C — frozen architecture
+
+USB-C on each half is for power and charging only.
+
+* No wired keyboard HID.
+* No USB D+/D− connection to either MCU.
+* No USB-PD controller.
+* No inter-half connection.
+* Standard 5 V USB-C sink.
+* Independent 5.1 kΩ Rd resistors on CC1 and CC2.
+* USB input protection and ESD must be implemented appropriately.
+
+The keyboard must be able to operate while plugged in and charging. Unplugging USB must transition to battery operation without requiring firmware intervention.
+
+Firmware programming/debugging is through SWD, not USB.
+
+## 3. Hall sensing — architecture selected, exact part still requires final validation
+
+Previous sensor: DRV5056A3. This was abandoned because its active current is unattractive for a battery-powered keyboard.
+
+Current primary candidate: **TI TMAG5253BA3**, analog Hall sensor with an enable/shutdown pin.
+
+The intended sensing architecture is:
+
+```text
+18 magnetic switches
+        ↓
+18 TMAG5253 sensors
+        ↓
+18 independent analog outputs
+        ↓
+STM32 ADC1 / ADC2
+        ↓
+DMA / key processing
+        ↓
+SPI to nRF52840
+```
+
+We considered a 2×9 enable-multiplexed arrangement but decided against it for the high-performance active scan path.
+
+**Selected direction:**
+
+* One independent ADC connection per Hall sensor.
+* No external analog mux.
+* No shared analog output lines during active operation.
+* All 18 sensors continuously enabled during active scanning.
+* Common or otherwise deliberate Hall enable control for low-power modes.
+* Target high scan performance, potentially 8 kHz, subject to actual timing validation.
+
+Important: “Direct ADC” does not mean all 18 channels convert simultaneously. The STM32 ADCs still sequence or otherwise schedule conversions. The goal is to avoid sensor-bank wakeup/multiplexing delays and simplify the acquisition path.
+
+The TMAG5253BA3 sensitivity variant is a strong candidate based on TI’s keyboard application material, but the exact variant must be checked against the actual Gateron switch magnet and sensor geometry. Do not claim saturation, travel resolution, or magnet polarity has been validated on our switch.
+
+The exact Hall footprint and mechanical placement must come from official package data and a proven compatible HE keyboard implementation. Do not invent the sensor-to-magnet geometry.
+
+No custom sensor test PCB is desired. If validation is needed, prefer existing TI evaluation/adapter hardware and an STM32 development board.
+
+## 4. Battery and power — selected architecture
+
+Each half uses a **1S, approximately 2000 mAh LiPo**. A slim pouch form factor is preferred.
+
+Selected power architecture:
+
+```text
+USB-C 5 V
+    ↓
+USB input protection
+    ↓
+BQ25185 charger / power path
+    ├── 1S protected LiPo
+    ↓
+SYS_RAW
+    ↓
+TPS63031 3.3 V buck-boost
+    ↓
+3V3_SYS
+    ├── STM32
+    ├── nRF52840
+    └── Hall sensors
+```
+
+The charger must support simultaneous system operation and battery charging. The regulator must maintain 3.3 V across the useful single-cell battery voltage range.
+
+### Previously selected component candidates
+
+| Function                   | Selected candidate                               |
+| -------------------------- | ------------------------------------------------ |
+| Charger / power path       | TI BQ25185DLHR                                   |
+| 3.3 V buck-boost           | TI TPS63031DSKT                                  |
+| USB-C power-only connector | GCT USB4125-GF-A-0190                            |
+| USB ESD                    | TI ESD441DPYR                                    |
+| Battery                    | A&S Power AS584070, 1S 2000 mAh                  |
+| Battery connector          | JST S3B-PH-K-S(LF)(SN), 3-pin right-angle        |
+| CC resistors               | 2× 5.1 kΩ, 1%                                    |
+| Regulator inductor         | 1.5 µH candidate from TPS63031 reference circuit |
+
+The previously discussed A&S pack was described as approximately 6 × 40.5 × 72.5 mm, protected, with a 10 kΩ B3435 NTC. **Treat the actual available pack, dimensions, protection, NTC specification, and connector wiring as procurement items to verify before ordering.** JST connector polarity is not universal.
+
+The previous schematic proposal used:
+
+* BQ25185 ILIM/VSET: 18 kΩ candidate for 4.2 V regulation / 500 mA input limit.
+* BQ25185 ISET: 845 Ω candidate for approximately 355 mA charge current.
+* Charger IN/SYS/BAT capacitors based on TI reference recommendations.
+* TPS63031 fixed 3.3 V configuration with 1.5 µH inductor.
+* Physical slide switch controlling regulator enable rather than carrying system load current.
+
+**These component values and exact pin connections must be independently checked against the current TI datasheets before they are placed in KiCad.** The architecture was selected, but the prior conversation did not complete a formal electrical audit.
+
+The battery should have its own protection. Charging temperature monitoring should use the pack NTC when available. Do not bypass temperature monitoring without an explicit, justified decision.
+
+Battery voltage measurement, power-state behavior, and wake strategy remain to be finalized.
+
+## 5. STM32 — current immediate task
+
+Selected MCU: **STM32G431RBT6, LQFP64**.
+
+The next task is to produce a complete, verified STM32 schematic and pin map.
+
+Required resources:
+
+* 18 independent external ADC inputs for Hall sensors.
+* SPI slave interface to nRF52840.
+* STM32 → nRF DATA_READY GPIO.
+* Hall enable control.
+* SWDIO and SWCLK.
+* NRST.
+* BOOT configuration.
+* Battery measurement ADC if assigned to STM32.
+* Necessary spare/control pins.
+* All power, analog reference, and grounding connections.
+
+**Do not assume that the family’s advertised ADC channel count means 18 external channels are available simultaneously on this exact package.** Verify the LQFP64 pinout, ADC1/ADC2 channel mapping, package availability, and conflicts with SPI/SWD/control pins.
+
+The exact STM32 pin map has NOT been finalized. The previous assistant repeatedly promised this audit but did not deliver it.
+
+The STM32 support circuit must include:
+
+* VDD/VSS.
+* VDDA/VSSA.
+* VREF+ configuration.
+* Required decoupling and analog filtering.
+* Reset and BOOT circuitry.
+* Clocking decision.
+* SWD header.
+* All required control and communication signals.
+
+Use official ST datasheets/reference manuals and relevant ST reference schematics. No guessed pin assignments.
+
+## 6. nRF52840 module
+
+Selected direction: **Raytac MDBT50Q-family nRF52840 module**.
+
+The exact module suffix/orderable part is not yet frozen. Verify the specific module pinout and electrical requirements before selecting it.
+
+The module owns wireless communication and is connected to the STM32 over SPI.
+
+Required:
+
+* Proper module power and decoupling.
+* SPI signals.
+* DATA_READY input.
+* SWD programming/debugging.
+* Reset/recovery access.
+* Appropriate module GPIO selection.
+* Antenna keepout and RF placement requirements.
+
+Do not assign SPI or other high-speed signals to module pins restricted by Raytac’s layout/RF guidance. Do not invent module pad numbers from generic nRF52840 silicon pin numbers.
+
+## 7. STM32 ↔ nRF communication — selected architecture
+
+Use **4-wire SPI plus DATA_READY**.
+
+Preferred roles:
+
+* nRF52840 = SPI master.
+* STM32 = SPI slave.
+
+Signals:
+
+```text
+SPI_SCK
+SPI_MOSI
+SPI_MISO
+SPI_CS_N
+STM_DATA_READY
+GND
+```
+
+The nRF owns RF scheduling and can request the latest processed key snapshot shortly before transmission.
+
+The STM32 continuously scans/processes keys and maintains a coherent latest-state buffer. The nRF reads that snapshot over SPI.
+
+Initial development SPI speed can be conservative, e.g. 8 MHz. Do not assume 32 MHz operation is required.
+
+The protocol is not yet frozen. It should include a deterministic way to identify fresh/coherent data, such as sequence numbers and a defined transaction format. CRC, status, command handling, and reset synchronization should be designed deliberately rather than invented during schematic generation.
+
+Do not assume DATA_READY alone guarantees a fresh packet or that a key event will be delivered before every RF deadline. The firmware protocol must handle asynchronous MCU timing.
+
+A possible additional nRF → STM32 reset/control line was discussed but not finalized.
+
+## 8. Programming and debugging
+
+The user wants simple **right-angle headers that can remain installed**.
+
+Each MCU should have independent SWD access.
+
+STM32:
+
+* VTREF / 3.3 V reference.
+* GND.
+* SWDIO.
+* SWCLK.
+* NRST.
+
+nRF52840:
+
+* VTREF / 3.3 V reference.
+* GND.
+* SWDIO.
+* SWCLK.
+* nRESET if supported/configured on the selected module.
+
+A 1×5 right-angle 2.54 mm header was proposed, but exact connector/pin order should be finalized and labeled clearly.
+
+The target board powers itself; debugger VTREF is a voltage reference, not an invitation to back-power the keyboard.
+
+STM32 development: ST-Link / STM32CubeIDE or equivalent SWD tooling.
+
+nRF development: nRF Connect SDK, VS Code, J-Link-compatible debugging, SEGGER RTT logging. An nRF52840 DK can potentially serve as an external debugger, subject to its documented external-target wiring.
+
+Both MCUs should be independently debuggable while the board is operating. Include accessible SPI test points for a logic analyzer.
+
+## 9. Buttons and LEDs — not finalized
+
+Need to decide:
+
+* Physical power switch.
+* nRF reset/recovery button.
+* Pairing button if required.
+* STM32 reset access.
+* Charge-status indication.
+* Wireless/status LED.
+* Any debug LED.
+
+Keep this minimal. No RGB lighting requirement has been established.
+
+## 10. Sleep and wake — important unresolved issue
+
+The Hall sensors can be disabled to reduce idle power, but fully disabled sensors cannot detect a key press.
+
+A real wake strategy is required, such as periodic low-rate scanning or another deliberate mechanism.
+
+Do not implement “turn all Hall sensors off, then wake immediately on key press” without explaining how the key press is detected.
+
+Active scan performance and idle battery life are separate operating modes. Battery runtime must be calculated from actual measured or datasheet-supported current budgets, not guessed.
+
+## 11. Footprints and KiCad workflow
+
+KiCad version: **10**.
+
+Before generating the schematic:
+
+1. Obtain official symbols/footprints for exact selected ICs and connectors.
+2. Verify pin numbering against the actual manufacturer package drawings.
+3. Obtain a proven compatible magnetic-switch footprint/layout reference.
+4. Verify TMAG5253 orientation relative to the switch magnet.
+5. Establish project-local libraries for any imported/custom symbols and footprints.
+6. Do not allow Codex to invent package geometry or silently substitute components.
+
+The final schematic should be hierarchical and organized into logical sheets, such as:
+
+* Power / USB / Battery
+* STM32 Core
+* Hall Array
+* ADC Acquisition
+* nRF52840 Radio
+* MCU Interconnect
+* Debug / Controls / Connectors
+
+The exact sheet organization can be adjusted, but net names and interfaces must remain consistent.
+
+## 12. What is actually next
+
+**Finalize the STM32G431RBT6 LQFP64 pin map first.**
+
+Produce a table containing:
+
+* Physical pin number.
+* STM32 pin name.
+* Peripheral/alternate function.
+* Assigned net.
+* Connected device/function.
+* Any conflicts or restrictions.
+
+Prove that all 18 Hall ADC inputs coexist with SPI, SWD, Hall enable, reset/boot, and required control/telemetry pins.
+
+Only after that should the nRF module pin map be frozen.
+
+Then finish buttons, LEDs, test/debug connectors, and the complete schematic audit.
+
+### Non-negotiable instruction to Codex
+
+Do not treat prior assistant recommendations as verified facts. Cross-check exact part numbers, electrical limits, resistor programming values, pin mappings, footprints, and reference circuits against official manufacturer documentation. If an assumption cannot be verified, label it unresolved rather than silently inventing an answer. The objective is a working board, not merely a schematic that passes ERC.
+
+
+Here’s the current Kaboard hardware state, separating decisions we’ve made from parts and circuits that still need a final audit. This is the version I would use as our working reference going forward.
+
+1. System architecture — frozen
+
+Each half is a completely independent wireless keyboard. There is no cable, power sharing, or communication between the halves.
+
+LEFT HALF                                  RIGHT HALF
+18 HE keys                                 18 HE keys
+    ↓                                          ↓
+18 Hall sensors                            18 Hall sensors
+    ↓                                          ↓
+STM32G431                                  STM32G431
+    ↓ SPI                                      ↓ SPI
+nRF52840                                   nRF52840
+    ↓ 2.4 GHz                                  ↓ 2.4 GHz
+    └───────────────┬──────────────────────────┘
+                    ↓
+              USB receiver
+                    ↓
+                  Host
+
+The STM32 owns Hall acquisition, calibration, filtering, actuation, and rapid-trigger logic. The nRF52840 owns wireless communication. The receiver combines the two halves into one keyboard presented to the host. The exact receiver implementation and RF protocol are not yet finalized.
+
+2. Hardware status
+Block	Current decision / component	Status
+Switches	18× Gateron Low-Profile Magnetic Jade Pro per half	Selected. Exact footprint and sensor geometry still need verification.
+Hall sensor	TI TMAG5253BA3 candidate	Strongly supported by TI’s keyboard application note; exact sensitivity and geometry with our switch remain untested.
+Hall architecture	18 independent analog outputs, no multiplexing during active use	Frozen architectural decision.
+Hall enable	Common HALL_EN; sensors continuously enabled during active scanning	Frozen direction. Idle/wake policy not yet finalized.
+STM32	STM32G431RBT6, LQFP64	Selected candidate. Full 18-ADC pin map has not been completed or proven conflict-free.
+Wireless MCU	nRF52840 on a Raytac module	Selected direction. Exact module SKU/revision and complete pin map remain open.
+MCU link	nRF SPI master, STM32 SPI slave, plus DATA_READY	Frozen architecture. Exact pins and electrical details remain open.
+USB-C	Power/charging only; no USB data on keyboard halves	Frozen.
+Battery	Protected 1S LiPo, approximately 2000 mAh per half	Capacity and chemistry frozen. Exact pack/connector not yet procurement-frozen.
+Charger	TI BQ25185DLHR	Selected power-path charger. Final schematic still requires pin-by-pin audit.
+3.3 V regulator	TI TPS63031DSKT	Selected fixed 3.3 V buck-boost. Final passive/enable implementation still requires audit.
+STM32 programming	Dedicated SWD, right-angle header	Frozen requirement.
+nRF programming	Dedicated SWD, right-angle header	Frozen requirement.
+Buttons/LEDs	Minimal controls; no unnecessary lighting	Not yet finalized.
+KiCad	KiCad 10, Codex-generated schematic from a detailed specification	Workflow decided; no final schematic or audited pin map exists yet.
+3. Hall sensing — what is actually validated
+
+We originally considered the DRV5056, but moved away from it because its active current is poorly suited to our battery-powered design. TI’s TMAG5253 is a substantially better fit: it supports 1.65–3.6 V operation, has a dedicated enable pin, a high-impedance output in shutdown, and a BA3 bipolar range of ±80 mT. TI also publishes a keyboard-specific application note. These are actual documented capabilities, not assumptions.
+
+We discussed a 2×9 multiplexed architecture, then deliberately rejected it for the performance version. Our decision is:
+
+18× TMAG5253
+    │
+    ├── 18 independent analog signals
+    └── common HALL_EN
+             ↓
+       STM32 ADC1 / ADC2
+             ↓
+       DMA + key processing
+
+All sensors remain awake during active use, avoiding repeated enable/wake delays. The tradeoff is higher active Hall current and more ADC pins. This does not make detection literally instantaneous—latency still includes sensor response, ADC sampling, processing, SPI, RF scheduling, and host handling.
+
+One correction to my earlier explanation: shutting all Hall sensors down means they cannot detect a keypress while off. We will need periodic wake-and-scan or another explicit wake mechanism. We have not designed that yet.
+
+4. Power subsystem — selected architecture
+
+The intended power tree is:
+
+USB-C 5 V
+    ↓
+BQ25185 charger / power path ←→ Protected 1S 2000 mAh LiPo
+    ↓
+SYS_RAW
+    ↓
+TPS63031 buck-boost
+    ↓
+3V3_SYS
+    ├── STM32
+    ├── nRF52840
+    └── Hall sensors
+
+The BQ25185 is a real standalone single-cell charger with integrated power-path management, a regulated 4.5 V SYS output when appropriately powered, and battery supplement capability. The TPS63031 is a fixed 3.3 V buck-boost with a 1.8–5.5 V input range and load disconnect in shutdown. This combination is technically appropriate for a 1S battery system.
+
+The parts previously proposed for this block were:
+
+Function	Proposed part / value
+USB-C connector	GCT USB4125-GF-A-0190, power-only
+CC resistors	2× 5.1 kΩ
+USB ESD	TI ESD441
+Charger	BQ25185DLHR
+Charger input limit / voltage	18 kΩ on ILIM/VSET → 4.2 V battery regulation, 500 mA input limit
+Charge current	845 Ω on ISET → approximately 355 mA nominal
+Regulator	TPS63031DSKT
+Regulator output	Fixed 3.3 V
+Power switch	Controls regulator EN, not battery current
+Battery connector	3-pin JST-PH proposed for VBAT, NTC, GND
+
+The 18 kΩ charger setting is directly confirmed by TI’s reference design.
+
+Important correction: I previously called the entire power schematic “frozen” too aggressively. The architecture and IC choices are sound, but the exact battery pack, connector pin order, USB protection implementation, charger TS/MR wiring, regulator passive values, and complete schematic have not undergone a final independent audit. They should not be handed to Codex as unquestionable facts yet.
+
+For the battery, we found thin 2 Ah candidates, including a roughly 6 × 40.5 × 72.5 mm A&S pack with an NTC. We have not confirmed availability, exact termination, or mechanical fit sufficiently to call a particular pack procurement-frozen.
+
+5. STM32 ↔ nRF communication — frozen architecture
+
+We agreed on SPI, with the nRF as master and STM32 as slave.
+
+STM32                         nRF52840
+------                        --------
+SPI_MISO ------------------> SPI_MISO
+SPI_MOSI <------------------ SPI_MOSI
+SPI_SCK  <------------------ SPI_SCK
+SPI_CS_N <------------------ SPI_CS_N
+
+DATA_READY ----------------> GPIO interrupt
+
+The STM32 maintains the latest processed key-state snapshot. The nRF requests it when needed for wireless transmission. We discussed compact packets containing a sequence number, key bitmap, status, and CRC, but the packet format is not frozen.
+
+We have also not decided whether to add a dedicated nRF→STM32 reset/control line or a hardware timing/synchronization line. Those are still design decisions, not existing schematic connections.
+
+6. Programming and debugging — frozen requirements
+
+Both MCUs get independent SWD access using right-angle headers that can remain installed.
+
+For the STM32, we need SWDIO, SWCLK, NRST, GND, and target-voltage reference. For the nRF52840, we need the equivalent SWD signals and reset access. The exact connector pin order and module-pad assignments still need to be drawn.
+
+The nRF52840 DK has an onboard SEGGER J-Link and officially supports programming/debugging external targets through its debug-out connector. We can use that rather than buying an expensive standalone debugger. Nordic recommends externally powering the target and ensuring compatible debug voltages.
+
+Our development setup can therefore be:
+
+ST-Link → STM32 SWD
+
+nRF52840 DK / J-Link → nRF SWD
+
+Logic analyzer → SPI + DATA_READY
+7. What has not been validated yet
+
+The most important distinction is that we have validated component capabilities and architectural precedent, not a complete working Kaboard circuit. We have not built a prototype, measured Hall output with our actual switch, completed the MCU pin assignments, or run a full schematic ERC.
+
+The remaining critical items are the exact STM32 pin map, exact Raytac module selection and pin map, Hall sensitivity/physical placement, full power schematic audit, battery pack/NTC/connector verification, sleep/wake behavior, buttons/LEDs, and the actual receiver/RF implementation.
+
+The STM32G431 family does have two fast 12-bit ADCs and substantial peripheral capability, but that does not prove that 18 external ADC inputs, SPI, SWD, battery measurement, and all control pins fit simultaneously on our chosen LQFP64 package. That is precisely the pin-level audit we still need to perform.
+
+Bottom line: the system architecture is now quite stable. The next task should be only the STM32G431RBT6 full pin map, with every ADC, SPI, SWD, power, and control pin checked against the exact package datasheet. We should not move on to the nRF map or Codex schematic until that is complete.
