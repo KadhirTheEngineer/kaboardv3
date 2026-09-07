@@ -10610,6 +10610,48 @@
 		)
 		(uuid "03ae6e1e-2348-4545-bafe-9b183af17cc3")
 	)
+	(wire
+		(pts
+			(xy 1009.65 217.17)
+			(xy 1019.81 217.17)
+		)
+		(uuid "4c67e881-21f7-4ca3-9442-cf86e7ff2bf8")
+	)
+	(wire
+		(pts
+			(xy 1019.81 217.17)
+			(xy 1019.81 267.97)
+		)
+		(uuid "ef5d9da6-6be6-40df-8015-c06865cc29a3")
+	)
+	(wire
+		(pts
+			(xy 1019.81 267.97)
+			(xy 994.41 267.97)
+		)
+		(uuid "ad8b67bb-85b3-419d-89d5-4335090482e3")
+	)
+	(wire
+		(pts
+			(xy 999.49 227.33)
+			(xy 1024.89 227.33)
+		)
+		(uuid "05024058-e3d0-4303-82b9-cffc83f5de7a")
+	)
+	(wire
+		(pts
+			(xy 1024.89 227.33)
+			(xy 1024.89 270.51)
+		)
+		(uuid "4a6f9b01-ffb9-46c8-8a6a-ccc3fbda7679")
+	)
+	(wire
+		(pts
+			(xy 1024.89 270.51)
+			(xy 994.41 270.51)
+		)
+		(uuid "d2799a68-a894-4d4f-81eb-efa7e24688d0")
+	)
 	(text "KABOARD V3 — ELECTRICAL SCHEMATIC"
 		(at 530 35 0)
 		(effects
@@ -15394,16 +15436,6 @@
 		(uuid "04daaf47-a7ac-4d40-927a-66c996fab43d")
 	)
 	(label "RX_GND"
-		(at 999.49 227.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d7dcbf47-efce-4d31-a2ae-d57fb9f7ec02")
-	)
-	(label "RX_GND"
 		(at 869.95 435.61 0)
 		(effects
 			(font
@@ -15802,26 +15834,6 @@
 			(justify right bottom)
 		)
 		(uuid "70adc3d4-5f50-4896-9e09-0eaa91f05f56")
-	)
-	(label "RX_OLED_VCC"
-		(at 1009.65 217.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cbab7e6c-307a-4489-bf15-fd0b51578747")
-	)
-	(label "RX_OLED_VCC"
-		(at 994.41 267.97 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e7c73c0c-758b-46ae-a2b8-0cb25c105523")
 	)
 	(label "RX_OLED_VCC"
 		(at 985.52 231.14 0)
@@ -16673,16 +16685,6 @@
 		)
 		(uuid "0148aa66-6341-44a4-b76d-013054dff529")
 	)
-	(label "RX_GND"
-		(at 994.41 270.51 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5e18fd35-e939-462f-9f3f-b0855b3c9400")
-	)
 	(label "L_USB_VBUS"
 		(at 49.53 160.02 0)
 		(effects
@@ -17322,6 +17324,16 @@
 			(justify left bottom)
 		)
 		(uuid "26d12378-5170-4b91-b339-3fef18298f06")
+	)
+	(label "RX_GND"
+		(at 1024.89 270.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b30459a-f908-458e-9c08-3b449dbbf4f1")
 	)
 	(symbol
 		(lib_id "MCU_ST_STM32G4:STM32G431RBTx")
