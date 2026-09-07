@@ -1,7 +1,7 @@
 # Kaboard architecture status
 
-This file is the checkpoint before schematic work. The KiCad schematic and PCB
-remain untouched until the decisions in this document are accepted.
+This file is the architecture checkpoint for the KiCad capture. The schematic
+has been entered through Konnect; the PCB remains untouched.
 
 ## Agreed direction
 
@@ -97,10 +97,21 @@ hardware decisions during drawing.
 
 ## Schematic capture status
 
-An architecture-level KiCad capture has now been started in
-`kaboardv3-hw/kaboardv3-hw.kicad_sch`. It shows both identical keyboard halves
-and the USB receiver with named functional blocks for power, Hall acquisition,
-STM32, nRF52840, OLED, RGB, USB-C, and SWD. It is intentionally marked
-non-release-ready: the next pass must replace the functional blocks with
-verified symbols/footprints and connect the detailed power, signal, and
-decoupling networks after the open decisions above are closed.
+The detailed electrical capture is now in
+`kaboardv3-hw/kaboardv3-hw.kicad_sch`. It contains both independent keyboard
+halves and the USB receiver, with named nets for the charger/power tree, all 18
+Hall channels per half, STM32↔nRF SPI/wake/data-ready links, nRF displays and
+battery telemetry, SWD, status LEDs, and the 18-device RGB chains.
+
+The capture uses project-local exact symbols where the installed libraries did
+not provide them (`TMAG5253`, `BQ25185`, `ESD441`, and the Würth LED) and the
+exact footprints recorded in `component-research.md`. No-connect markers are
+explicit on unused MCU/module pins. The current file passes Konnect component,
+wire, orphan, short-net, overlap, ERC, decoupling, power-rail, and connection
+audits with zero reported violations.
+
+This is an electrically complete design baseline, not a fabrication release.
+The exact OLED module/connector, battery supplier drawing and polarity/NTC
+termination, switch/magnet mechanical drawing, antenna keepout, board outline,
+mounting, and final RGB thermal/brightness limits still require sign-off before
+PCB layout or release.
