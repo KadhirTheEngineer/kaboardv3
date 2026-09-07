@@ -47,6 +47,12 @@ Konnect audits on the saved root sheet currently report:
 - decoupling: 66/66 power pins covered;
 - power-rail and connection audits: 0 findings.
 
+The root sheet also has explicit section headings for the three domains and
+their power, Hall/ADC, MCU/radio, display/debug, and RGB blocks. Repeated Hall
+and RGB values are shortened for readability (`TMAG5253 A01…A18`,
+`WL-ICLED A01…A18`, and corresponding `B` channels); the exact MPNs remain
+defined by the selected symbols, footprints, and this document.
+
 ## Release blockers
 
 The electrical baseline must not be treated as a PCB-release package until the
