@@ -488,7 +488,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "kaboardv3-hw.kicad_pro",
+    "filename": "kaboard-receiver.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -656,8 +656,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "kaboardv3-hw.kicad_sch",
-        "name": "kaboardv3-hw",
+        "filename": "kaboard-receiver.kicad_sch",
+        "name": "kaboard-receiver",
         "uuid": "59fc09ba-5175-4091-9ec9-eda9e4d1c527"
       }
     ],
@@ -667,7 +667,7 @@
   "sheets": [
     [
       "59fc09ba-5175-4091-9ec9-eda9e4d1c527",
-      "kaboardv3-hw"
+      "kaboard-receiver"
     ]
   ],
   "text_variables": {},
