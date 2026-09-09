@@ -8565,17 +8565,6 @@
 	)
 	(wire
 		(pts
-			(xy 629.92 119.38)
-			(xy 659.13 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b5b5e2a-0765-4dad-9b6c-965cb0afc6c0")
-	)
-	(wire
-		(pts
 			(xy 436.88 294.64)
 			(xy 436.88 285.75)
 		)
@@ -8661,17 +8650,6 @@
 			(type default)
 		)
 		(uuid "50ba53f7-ae81-4327-b2b7-7962e969b266")
-	)
-	(wire
-		(pts
-			(xy 659.13 231.14)
-			(xy 635 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51f5aac8-db4c-4c63-9630-e8eec0b11318")
 	)
 	(wire
 		(pts
@@ -8793,17 +8771,6 @@
 			(type default)
 		)
 		(uuid "7f18a345-166f-40ef-8d91-c5d58887e80c")
-	)
-	(wire
-		(pts
-			(xy 659.13 119.38)
-			(xy 659.13 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80a2481b-7d5b-48ae-a933-0aea1e26b806")
 	)
 	(wire
 		(pts
@@ -9256,218 +9223,107 @@
 		)
 		(uuid "feeab8fd-6fef-4732-8291-d7b494c44963")
 	)
-	(text "POWER / CHARGE / 3V3 / 5V RGB"
-		(at 175 95 0)
+	(wire
+		(pts
+			(xy 629.92 119.38)
+			(xy 632.46 119.38)
+		)
+		(uuid "f809eceb-0023-41fb-b21b-72df22677f0e")
+	)
+	(wire
+		(pts
+			(xy 699.77 109.22)
+			(xy 699.77 106.68)
+		)
+		(uuid "e26060de-668e-4697-af38-bb5ef7e1adfc")
+	)
+	(text "RIGHT BOARD — 1S LiPo / WIRELESS"
+		(at 405 55 0)
 		(effects
 			(font
-				(size 1.8 1.8)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "051a40ba-32e7-4846-abfd-366b04522cd3")
+		(uuid "d6bad3bc-5a0b-411c-a4d1-7d7236df8940")
 	)
-	(text "STM32 ACQUISITION / CALIBRATION / ACTUATION"
-		(at 585 370 0)
+	(text "USB / CHARGE / POWER"
+		(at 400 95 0)
 		(effects
 			(font
-				(size 1.7 1.7)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "08984166-8b4c-41c1-ac00-d78d6c362ef2")
+		(uuid "2edecee7-266e-4fed-b083-daa5592bd886")
 	)
-	(text "RIGHT HALF — INDEPENDENT 1S LiPo / WIRELESS"
-		(at 555 75 0)
+	(text "HALL SENSORS — 3 ENABLE GROUPS / 18 ADC"
+		(at 400 280 0)
 		(effects
 			(font
-				(size 2.4 2.4)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "10eb03b7-ee1a-4d9d-aa24-ef722a846afa")
+		(uuid "4c189c7a-109d-4e6c-a147-f1a74d21ce25")
 	)
-	(text "KABOARD V3 — ELECTRICAL SCHEMATIC"
-		(at 530 35 0)
+	(text "STM32 — ACQUISITION / CALIBRATION / ACTUATION"
+		(at 500 370 0)
 		(effects
 			(font
-				(size 3.2 3.2)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "16e424ec-93ca-4e2e-aed7-8f835a5babb8")
+		(uuid "89e643c5-8b3a-4f2f-913a-8a270614344d")
 	)
-	(text "USB POWER / 3V3 / DISPLAY"
-		(at 900 95 0)
+	(text "nRF52840 — RADIO / BATTERY / I2C"
+		(at 665 370 0)
 		(effects
 			(font
-				(size 1.8 1.8)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "274b80dd-97ff-42e8-b9ec-156bef032f56")
+		(uuid "edd4efee-37b1-4796-89bc-1ff7cb0ca82d")
 	)
-	(text "LEFT HALF — INDEPENDENT 1S LiPo / WIRELESS"
-		(at 175 75 0)
+	(text "DISPLAY — SH1106 I2C"
+		(at 680 255 0)
 		(effects
 			(font
-				(size 2.4 2.4)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "2980e13d-c013-491d-a809-bde66b8e7773")
+		(uuid "0165120c-0eca-4ead-88aa-8d51d74f0bd6")
 	)
-	(text "RECEIVER — USB HID / nRF52840"
-		(at 900 75 0)
+	(text "DEBUG — STM32 + nRF SWD"
+		(at 530 520 0)
 		(effects
 			(font
-				(size 2.4 2.4)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "36c01322-a208-4e06-999f-7f96baaa8385")
+		(uuid "f466cfa9-7320-4aeb-a363-73d9ee7b361c")
 	)
-	(text "OPTIONAL DISPLAY: 4-WIRE SH1106 MODULE"
-		(at 1000 255 0)
+	(text "WL-ICLED — 5V RAIL / LEVEL SHIFT"
+		(at 400 625 0)
 		(effects
 			(font
-				(size 1.4 1.4)
-			)
-		)
-		(uuid "3d137a5c-d6e1-4308-9af4-3455096e340a")
-	)
-	(text "nRF52840 RADIO / BATTERY TELEMETRY / I²C"
-		(at 695 370 0)
-		(effects
-			(font
-				(size 1.7 1.7)
+				(size 2 2)
 				(bold yes)
 			)
+			(justify left bottom)
 		)
-		(uuid "3d3ad99d-ea70-4a80-9af3-34f9fcbdaeb5")
-	)
-	(text "18× TMAG5253 — 3 ENABLE GROUPS / 18 ADC CHANNELS"
-		(at 485 280 0)
-		(effects
-			(font
-				(size 1.7 1.7)
-				(bold yes)
-			)
-		)
-		(uuid "4040b970-2a67-4860-9fcf-22eb82cc7426")
-	)
-	(text "POWER / CHARGE / 3V3 / 5V RGB"
-		(at 555 95 0)
-		(effects
-			(font
-				(size 1.8 1.8)
-				(bold yes)
-			)
-		)
-		(uuid "40d597f8-1ccf-454c-98cd-329f9545cc52")
-	)
-	(text "SWD: STM32 + nRF52840"
-		(at 195 520 0)
-		(effects
-			(font
-				(size 1.5 1.5)
-			)
-		)
-		(uuid "4c9431fa-3617-446c-8a04-9983fd3eb6f7")
-	)
-	(text "SWD: nRF52840"
-		(at 1030 520 0)
-		(effects
-			(font
-				(size 1.5 1.5)
-			)
-		)
-		(uuid "4ef5a2ba-cc7c-4a8f-bdfa-14f0e0e3c2e3")
-	)
-	(text "18× TMAG5253 — 3 ENABLE GROUPS / 18 ADC CHANNELS"
-		(at 105 280 0)
-		(effects
-			(font
-				(size 1.7 1.7)
-				(bold yes)
-			)
-		)
-		(uuid "6020f2f1-7fd4-4f17-acf2-25190f6613e4")
-	)
-	(text "18× WL-ICLED — 5V SWITCHED RAIL / AHCT DATA LEVEL SHIFT"
-		(at 160 625 0)
-		(effects
-			(font
-				(size 1.7 1.7)
-				(bold yes)
-			)
-		)
-		(uuid "69ff0a4e-04fc-4b73-8de0-910d26ea12e3")
-	)
-	(text "18× WL-ICLED — 5V SWITCHED RAIL / AHCT DATA LEVEL SHIFT"
-		(at 540 625 0)
-		(effects
-			(font
-				(size 1.7 1.7)
-				(bold yes)
-			)
-		)
-		(uuid "6c0cac09-ab2b-495a-8b3a-c9ebd4211e72")
-	)
-	(text "nRF52840 RADIO / BATTERY TELEMETRY / I²C"
-		(at 315 370 0)
-		(effects
-			(font
-				(size 1.7 1.7)
-				(bold yes)
-			)
-		)
-		(uuid "855c59e0-320b-43a5-9af0-18a9c6587e87")
-	)
-	(text "DISPLAY: 4-WIRE SH1106 MODULE (VCC / GND / SCL / SDA)"
-		(at 330 255 0)
-		(effects
-			(font
-				(size 1.4 1.4)
-			)
-		)
-		(uuid "8fadaed8-1f61-4b31-aa7f-bc8b27e0ddc0")
-	)
-	(text "STM32 ACQUISITION / CALIBRATION / ACTUATION"
-		(at 205 370 0)
-		(effects
-			(font
-				(size 1.7 1.7)
-				(bold yes)
-			)
-		)
-		(uuid "b6b3b138-7c53-40e0-bc71-e1b128c35b20")
-	)
-	(text "SWD: STM32 + nRF52840"
-		(at 575 520 0)
-		(effects
-			(font
-				(size 1.5 1.5)
-			)
-		)
-		(uuid "e16b4046-02c5-45b9-832e-9bfdf2741626")
-	)
-	(text "DISPLAY: 4-WIRE SH1106 MODULE (VCC / GND / SCL / SDA)"
-		(at 710 255 0)
-		(effects
-			(font
-				(size 1.4 1.4)
-			)
-		)
-		(uuid "e75d6f76-8d10-4406-b826-4e12a262587d")
-	)
-	(text "L_* = LEFT HALF    R_* = RIGHT HALF    RX_* = USB RECEIVER"
-		(at 530 50 0)
-		(effects
-			(font
-				(size 1.8 1.8)
-			)
-		)
-		(uuid "ed7cb7a1-94d1-4f92-a112-e556373e35f6")
+		(uuid "676f6131-638d-4de7-8427-e054ac17417a")
 	)
 	(label "R_HALL_OUT_17"
 		(at 486.41 452.12 0)
@@ -9478,26 +9334,6 @@
 			(justify left bottom)
 		)
 		(uuid "02043afa-b6a8-4ccb-9eef-4e2335f3618e")
-	)
-	(label "R_GND"
-		(at 665.48 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "039a8914-ebdc-4a21-8868-124f202f0a68")
-	)
-	(label "R_3V3"
-		(at 609.6 266.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "05d8ca90-20f0-4838-ae53-2d34cb5d6a9a")
 	)
 	(label "R_3V3"
 		(at 694.69 217.17 180)
@@ -9659,16 +9495,6 @@
 		)
 		(uuid "12e3e58f-3ecb-4ee1-83be-9f05e09930f6")
 	)
-	(label "R_3V3"
-		(at 554.99 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "136453cf-3155-4132-9cba-fca21d855f9d")
-	)
 	(label "R_GND"
 		(at 524.51 116.84 180)
 		(effects
@@ -9789,16 +9615,6 @@
 		)
 		(uuid "227db2ca-9158-4a76-8d2b-19eb193816c9")
 	)
-	(label "R_GND"
-		(at 554.99 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "23e501c5-8ef9-4334-b243-b872dc321822")
-	)
 	(label "R_HALL_OUT_12"
 		(at 736.6 502.92 0)
 		(effects
@@ -9870,16 +9686,6 @@
 		(uuid "29114424-318d-4b4a-b233-3cdc630c4372")
 	)
 	(label "R_3V3"
-		(at 604.52 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2a78246f-aa35-401b-a87d-24f87050f5ea")
-	)
-	(label "R_3V3"
 		(at 415.29 551.18 0)
 		(effects
 			(font
@@ -9948,16 +9754,6 @@
 			(justify right bottom)
 		)
 		(uuid "3495e86a-9069-4640-a62d-0c55672df74d")
-	)
-	(label "R_GND"
-		(at 495.3 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "35eee5c8-ac2f-4661-8365-642d868a1f7e")
 	)
 	(label "R_3V3"
 		(at 547.37 341.63 0)
@@ -10038,16 +9834,6 @@
 			(justify left bottom)
 		)
 		(uuid "3eeb9a20-ca8f-4cf4-9ef9-4577e45302a2")
-	)
-	(label "R_GND"
-		(at 604.52 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3fb48a58-b910-479c-b321-0c592cd56038")
 	)
 	(label "R_HALL_EN_C"
 		(at 765.81 497.84 0)
@@ -10159,26 +9945,6 @@
 		)
 		(uuid "487f1910-c91d-486c-9862-bedb1ef57840")
 	)
-	(label "R_GND"
-		(at 624.84 274.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4e070f5f-bbb8-4a23-8105-465a166b6fad")
-	)
-	(label "R_GND"
-		(at 524.51 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4e886122-7d35-43e1-a4fa-ed026976cd61")
-	)
 	(label "R_BQ_ISET"
 		(at 485.14 215.9 0)
 		(effects
@@ -10188,16 +9954,6 @@
 			(justify left bottom)
 		)
 		(uuid "4eec1622-82f7-4ea9-a868-d214bab795f3")
-	)
-	(label "R_GND"
-		(at 474.98 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4f045259-b857-417d-9e76-fe0d601d14de")
 	)
 	(label "R_HALL_EN_A"
 		(at 505.46 297.18 0)
@@ -10328,16 +10084,6 @@
 			(justify left bottom)
 		)
 		(uuid "56a05608-a9f4-4bf4-89d8-8dd68d59ba5b")
-	)
-	(label "R_BAT"
-		(at 495.3 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "580371c2-934c-4dc7-b1b2-4dece09c46a6")
 	)
 	(label "R_STM_WAKE_NRF"
 		(at 527.05 394.97 180)
@@ -10499,36 +10245,6 @@
 		)
 		(uuid "6481f672-7590-456d-9a25-4eaef35fe869")
 	)
-	(label "R_3V3"
-		(at 505.46 266.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "64dbc4cd-5b93-4310-898e-a528b8b1b8dd")
-	)
-	(label "R_GND"
-		(at 694.69 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "653b1c33-119a-4c1f-a935-bb34aba19f20")
-	)
-	(label "R_GND"
-		(at 709.93 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "67056338-100f-42a1-bda4-0877e9172309")
-	)
 	(label "R_GND"
 		(at 485.14 223.52 0)
 		(effects
@@ -10638,16 +10354,6 @@
 			(justify left bottom)
 		)
 		(uuid "6c63dd26-b429-4cce-a557-891ffabf105b")
-	)
-	(label "R_GND"
-		(at 444.5 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6c8334f4-18f5-43ec-9f7f-34b1f25b0ae5")
 	)
 	(label "R_HALL_EN_B"
 		(at 449.58 342.9 0)
@@ -10759,16 +10465,6 @@
 		)
 		(uuid "75aa94bf-46f9-4dc8-ac3d-7217d933fea6")
 	)
-	(label "R_3V3"
-		(at 624.84 266.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "75f83910-d8df-4e67-ab94-436dbaae505f")
-	)
 	(label "R_GND"
 		(at 430.53 170.18 0)
 		(effects
@@ -10778,16 +10474,6 @@
 			(justify left bottom)
 		)
 		(uuid "76b03f0a-3064-4cc6-9ef5-e21b0cbcb88a")
-	)
-	(label "R_USB_VBUS"
-		(at 444.5 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "779181c4-56d4-4357-b8d0-ed3b9c1172d8")
 	)
 	(label "R_BQ_ILIM"
 		(at 444.5 121.92 180)
@@ -10868,16 +10554,6 @@
 			(justify right bottom)
 		)
 		(uuid "7d564311-f3e2-4b8d-b0b9-3762e9309569")
-	)
-	(label "R_GND"
-		(at 640.08 274.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7f83c24d-60c3-4b7b-858d-4976099a8ea5")
 	)
 	(label "R_HALL_OUT_10"
 		(at 505.46 347.98 0)
@@ -11009,26 +10685,6 @@
 		)
 		(uuid "8ea16397-c22c-4a8d-8d81-b8af99ba40fe")
 	)
-	(label "R_GND"
-		(at 635 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "91d4cb41-a801-4264-b773-665bf8087197")
-	)
-	(label "R_OLED_VCC"
-		(at 709.93 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "92ac60f7-d83e-4511-b237-f109f8977868")
-	)
 	(label "R_SPI_CS_N"
 		(at 562.61 387.35 0)
 		(effects
@@ -11109,16 +10765,6 @@
 		)
 		(uuid "9858294c-904d-4b41-bdec-e7a4c2bfe5ea")
 	)
-	(label "R_LED_5V"
-		(at 665.48 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "993dcac0-c2db-461d-a56b-36ce5eb1eff5")
-	)
 	(label "R_3V3"
 		(at 527.05 571.5 0)
 		(effects
@@ -11149,16 +10795,6 @@
 		)
 		(uuid "9c81300f-4e9e-437b-a4f2-b70946563635")
 	)
-	(label "R_SYS"
-		(at 474.98 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9d0c5392-2423-4430-ab99-a765fb333663")
-	)
 	(label "R_GND"
 		(at 532.13 134.62 0)
 		(effects
@@ -11178,16 +10814,6 @@
 			(justify left bottom)
 		)
 		(uuid "9d475ab4-5b24-488b-982a-8f9607663fee")
-	)
-	(label "R_GND"
-		(at 609.6 274.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9d50c33a-b550-44e3-b8f3-e39d1b52d41b")
 	)
 	(label "R_GND"
 		(at 650.24 203.2 0)
@@ -11228,26 +10854,6 @@
 			(justify left bottom)
 		)
 		(uuid "a056e12f-6c45-445c-9e1c-02c00b9056df")
-	)
-	(label "R_OLED_VCC"
-		(at 694.69 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a0b94754-0bcc-4c8d-8941-f0c0ec0b30d4")
-	)
-	(label "R_SYS"
-		(at 524.51 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a117a77c-e974-488a-9c15-06979a1fdc68")
 	)
 	(label "R_HALL_EN_B"
 		(at 706.12 497.84 0)
@@ -11328,16 +10934,6 @@
 			(justify left bottom)
 		)
 		(uuid "a6d7ac8a-9596-41df-be31-2e579cf3ab94")
-	)
-	(label "R_3V3"
-		(at 519.43 266.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a7a66c56-305e-4acb-a122-176c5a091a97")
 	)
 	(label "R_GND"
 		(at 480.06 457.2 0)
@@ -11620,16 +11216,6 @@
 		(uuid "c24778f1-bf24-48f6-b7d8-cb5df991766b")
 	)
 	(label "R_GND"
-		(at 519.43 274.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c300fe15-d1af-4ddd-84b0-5b92e4983349")
-	)
-	(label "R_GND"
 		(at 527.05 579.12 0)
 		(effects
 			(font
@@ -11668,16 +11254,6 @@
 			(justify left bottom)
 		)
 		(uuid "c676d6fc-9e3c-42e2-bcde-5515fdd4d00a")
-	)
-	(label "R_LED_5V"
-		(at 635 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c85e5c04-06cc-4b93-b86c-74b13187ab1a")
 	)
 	(label "R_DISPLAY_EN"
 		(at 694.69 222.25 180)
@@ -12090,16 +11666,6 @@
 		(uuid "f07d8116-8b0b-425b-816c-8e58db4b00fe")
 	)
 	(label "R_GND"
-		(at 505.46 274.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f0a555bd-4cbf-4b64-bd39-29bf03c88082")
-	)
-	(label "R_GND"
 		(at 527.05 599.44 0)
 		(effects
 			(font
@@ -12148,16 +11714,6 @@
 			(justify left bottom)
 		)
 		(uuid "f2df3261-8e46-4b6f-8141-8fae56464982")
-	)
-	(label "R_3V3"
-		(at 640.08 266.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f3900df5-cf98-4b4a-bc3b-1a0b69e9391d")
 	)
 	(label "R_HALL_EN_B"
 		(at 527.05 389.89 180)
@@ -12939,6 +12495,326 @@
 		)
 		(uuid "64dbae06-234a-45c9-800c-6e23fc44428b")
 	)
+	(label "R_3V3"
+		(at 505.46 326.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "57e2916c-6a9a-499e-b0a8-f87d733af477")
+	)
+	(label "R_3V3"
+		(at 519.43 326.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c22845e4-8c94-418d-ad27-4bd3c2986aec")
+	)
+	(label "R_3V3"
+		(at 614.68 326.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f603659-0ffa-4a94-8c0b-c8de337d9a60")
+	)
+	(label "R_3V3"
+		(at 629.92 326.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7081f99b-ab1d-47d3-a955-a5a7509f2da7")
+	)
+	(label "R_3V3"
+		(at 645.16 326.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ec616e2-c51d-4804-8443-682c0501b091")
+	)
+	(label "R_GND"
+		(at 505.46 334.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "045b46d9-a721-43c5-aee9-0d12347d4e9c")
+	)
+	(label "R_GND"
+		(at 519.43 334.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "01198686-0432-46fe-a6ab-762db6bf9ec2")
+	)
+	(label "R_GND"
+		(at 614.68 334.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d8ceb73c-cde2-40cf-b0dd-3cd863bd4bc8")
+	)
+	(label "R_GND"
+		(at 629.92 334.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b2da9714-4e48-4129-bdd7-1ea340be1aef")
+	)
+	(label "R_GND"
+		(at 645.16 334.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "973d4815-a209-4b88-a0ba-89e2136c0067")
+	)
+	(label "R_OLED_VCC"
+		(at 689.61 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d39c12f-9148-4882-9bd7-e5f61159678f")
+	)
+	(label "R_OLED_VCC"
+		(at 709.93 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0cf33aea-c911-4508-bb8b-133f893eac47")
+	)
+	(label "R_GND"
+		(at 689.61 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f2ce9e04-4056-4330-b10d-12a5a21bea33")
+	)
+	(label "R_GND"
+		(at 614.68 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1e49ef7d-56b2-47bf-8765-907c15347e2a")
+	)
+	(label "R_GND"
+		(at 560.07 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c18bc4e8-971e-4787-a4e5-005f5e82574d")
+	)
+	(label "R_GND"
+		(at 454.66 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2952ed87-e2a1-41db-acc0-dee66c1d0a7d")
+	)
+	(label "R_GND"
+		(at 635 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "598ed4a3-e9ac-45ed-90be-7e4cab75588b")
+	)
+	(label "R_GND"
+		(at 595.63 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c89c338c-9bca-4927-9073-a5672b7dd68f")
+	)
+	(label "R_GND"
+		(at 430.53 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2521dcf-b0fd-4a68-85c8-53da3cf65186")
+	)
+	(label "R_GND"
+		(at 529.59 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c682ddf4-0aab-4013-aa69-79bc1859121e")
+	)
+	(label "R_GND"
+		(at 480.06 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6dda8bd4-1d2d-4d71-8cee-d474f396c867")
+	)
+	(label "R_GND"
+		(at 709.93 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "943ce782-9c08-4cc3-b9d9-d01742571bb9")
+	)
+	(label "R_LED_5V"
+		(at 614.68 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e07a865-18e6-404e-8f2e-dc9db3fc84b7")
+	)
+	(label "R_LED_5V"
+		(at 635 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6f750a52-bd0e-4ca2-a267-83c7b82eb903")
+	)
+	(label "R_3V3"
+		(at 560.07 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9fb25ce-b348-494b-bcb0-def4683de8bc")
+	)
+	(label "R_3V3"
+		(at 595.63 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d74db509-31b2-449f-a8fe-d3662a5dace9")
+	)
+	(label "R_SYS"
+		(at 454.66 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3d1d090-0b85-4085-a8b4-5480bf1983e8")
+	)
+	(label "R_SYS"
+		(at 529.59 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "338157d9-77a6-4424-b4e0-c47b7bb6ecea")
+	)
+	(label "R_USB_VBUS"
+		(at 430.53 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e935ae03-acff-410a-9839-7410c143d19b")
+	)
+	(label "R_BAT"
+		(at 480.06 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f26db09b-6dbf-40a7-b93e-8512b2c17ec1")
+	)
+	(label "R_LED_5V"
+		(at 632.46 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c6120392-8a9b-4291-90b4-5f505c2dacd7")
+	)
+	(label "R_LED_5V"
+		(at 699.77 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8921a249-dafc-4e63-af96-0af82f4b456b")
+	)
 	(symbol
 		(lib_id "Device:C")
 		(at 443.23 595.63 0)
@@ -13018,6 +12894,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C66")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13093,6 +12975,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "D21")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "D21")
 					(unit 1)
 				)
@@ -13181,6 +13069,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "J9")
 					(unit 1)
 				)
@@ -13292,6 +13186,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U30")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13367,6 +13267,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "R23")
 					(unit 1)
 				)
@@ -13450,11 +13356,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "R28")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 694.69 234.95 0)
+		(at 689.61 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13462,7 +13374,7 @@
 		(dnp no)
 		(uuid "1980f52c-288b-4d45-a580-2335f1bfc68c")
 		(property "Reference" "C51"
-			(at 695.325 232.41 0)
+			(at 690.245 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13473,7 +13385,7 @@
 			)
 		)
 		(property "Value" "1u OLED VCC"
-			(at 695.325 237.49 0)
+			(at 690.245 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13484,7 +13396,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 694.69 234.95 0)
+			(at 689.61 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13495,7 +13407,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 694.69 234.95 0)
+			(at 689.61 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13506,7 +13418,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 694.69 234.95 0)
+			(at 689.61 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13527,6 +13439,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C51")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C51")
 					(unit 1)
 				)
@@ -13612,6 +13530,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C67")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13689,6 +13613,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C63")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C63")
 					(unit 1)
 				)
@@ -13772,11 +13702,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "R21")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 635 234.95 0)
+		(at 614.68 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13784,7 +13720,7 @@
 		(dnp no)
 		(uuid "33365a10-42c5-460f-aa77-26729d8ff184")
 		(property "Reference" "C49"
-			(at 635.635 232.41 0)
+			(at 615.315 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13795,7 +13731,7 @@
 			)
 		)
 		(property "Value" "47u LED 5V"
-			(at 635.635 237.49 0)
+			(at 615.315 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13806,7 +13742,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 635 234.95 0)
+			(at 614.68 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13817,7 +13753,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 635 234.95 0)
+			(at 614.68 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13828,7 +13764,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 635 234.95 0)
+			(at 614.68 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13849,6 +13785,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C49")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C49")
 					(unit 1)
 				)
@@ -13949,6 +13891,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "J6")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -14034,11 +13982,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "J8")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 640.08 270.51 0)
+		(at 645.16 330.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14046,7 +14000,7 @@
 		(dnp no)
 		(uuid "3dad3cfe-f12d-4b48-8480-6e65a536a64a")
 		(property "Reference" "C45"
-			(at 640.715 267.97 0)
+			(at 645.795 327.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14057,7 +14011,7 @@
 			)
 		)
 		(property "Value" "100n nRF VBUS"
-			(at 640.715 273.05 0)
+			(at 645.795 332.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14068,7 +14022,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 640.08 270.51 0)
+			(at 645.16 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14079,7 +14033,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 640.08 270.51 0)
+			(at 645.16 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14090,7 +14044,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 640.08 270.51 0)
+			(at 645.16 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14115,11 +14069,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C45")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 554.99 234.95 0)
+		(at 560.07 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14127,7 +14087,7 @@
 		(dnp no)
 		(uuid "45a7498a-5105-4b6b-a63c-b17fd8298574")
 		(property "Reference" "C40"
-			(at 555.625 232.41 0)
+			(at 560.705 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14138,7 +14098,7 @@
 			)
 		)
 		(property "Value" "10u 3V3"
-			(at 555.625 237.49 0)
+			(at 560.705 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14149,7 +14109,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 554.99 234.95 0)
+			(at 560.07 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14160,7 +14120,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 554.99 234.95 0)
+			(at 560.07 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14171,7 +14131,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 554.99 234.95 0)
+			(at 560.07 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14196,80 +14156,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 49.53 170.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "49263183-0aa8-4fd4-9484-830318534496")
-		(property "Reference" "#FLG0102"
-			(at 49.53 168.275 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG L GND"
-			(at 49.53 166.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 49.53 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "4a126f2f-fa3a-45d7-80eb-c1e7af7610a9")
-		)
-		(instances
-			(project "kaboard-right"
-				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
-					(reference "#FLG0102")
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -14350,6 +14239,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C70")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C70")
 					(unit 1)
 				)
@@ -14435,6 +14330,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C53")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -14516,6 +14417,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C54")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -14591,6 +14498,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "R24")
 					(unit 1)
 				)
@@ -14676,6 +14589,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C61")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -14755,6 +14674,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "R25")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -14830,6 +14755,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "R19")
 					(unit 1)
 				)
@@ -14915,11 +14846,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C47")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 474.98 234.95 0)
+		(at 454.66 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14927,7 +14864,7 @@
 		(dnp no)
 		(uuid "68e43f6b-097c-414f-af2f-4d59f33e8fc4")
 		(property "Reference" "C37"
-			(at 475.615 232.41 0)
+			(at 455.295 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14938,7 +14875,7 @@
 			)
 		)
 		(property "Value" "10u SYS"
-			(at 475.615 237.49 0)
+			(at 455.295 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14949,7 +14886,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 474.98 234.95 0)
+			(at 454.66 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14960,7 +14897,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 474.98 234.95 0)
+			(at 454.66 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14971,7 +14908,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 474.98 234.95 0)
+			(at 454.66 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14992,6 +14929,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C37")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C37")
 					(unit 1)
 				)
@@ -15071,6 +15014,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "L3")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "L3")
 					(unit 1)
 				)
@@ -15181,11 +15130,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U29")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 665.48 234.95 0)
+		(at 635 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15193,7 +15148,7 @@
 		(dnp no)
 		(uuid "6e0e3109-e9b7-49c8-bff7-44cf1f531ba7")
 		(property "Reference" "C50"
-			(at 666.115 232.41 0)
+			(at 635.635 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15204,7 +15159,7 @@
 			)
 		)
 		(property "Value" "100n LED bulk"
-			(at 666.115 237.49 0)
+			(at 635.635 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15215,7 +15170,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 665.48 234.95 0)
+			(at 635 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15226,7 +15181,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 665.48 234.95 0)
+			(at 635 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15237,7 +15192,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 665.48 234.95 0)
+			(at 635 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15258,6 +15213,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C50")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C50")
 					(unit 1)
 				)
@@ -15335,6 +15296,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "#FLG0103")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "#FLG0103")
 					(unit 1)
 				)
@@ -15420,6 +15387,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C59")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -15497,6 +15470,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C57")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C57")
 					(unit 1)
 				)
@@ -15580,11 +15559,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "R27")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 604.52 234.95 0)
+		(at 595.63 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15592,7 +15577,7 @@
 		(dnp no)
 		(uuid "7f81a8bc-6886-474e-9a16-7ecf73829a92")
 		(property "Reference" "C48"
-			(at 605.155 232.41 0)
+			(at 596.265 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15603,7 +15588,7 @@
 			)
 		)
 		(property "Value" "10u RGB IN"
-			(at 605.155 237.49 0)
+			(at 596.265 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15614,7 +15599,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 604.52 234.95 0)
+			(at 595.63 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15625,7 +15610,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 604.52 234.95 0)
+			(at 595.63 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15636,7 +15621,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 604.52 234.95 0)
+			(at 595.63 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15661,80 +15646,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 789.94 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "840a24b0-d546-46b4-836f-c88f5d185345")
-		(property "Reference" "#FLG0105"
-			(at 789.94 158.115 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG RX USB VBUS"
-			(at 789.94 156.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 789.94 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 789.94 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 789.94 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "a7d22fe2-1c54-4849-8525-6271466c2cd3")
-		)
-		(instances
-			(project "kaboard-right"
-				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
-					(reference "#FLG0105")
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -15817,11 +15731,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "D22")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 444.5 234.95 0)
+		(at 430.53 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15829,7 +15749,7 @@
 		(dnp no)
 		(uuid "84d8de44-aa45-4bc6-b027-5ad47c46cd9a")
 		(property "Reference" "C36"
-			(at 445.135 232.41 0)
+			(at 431.165 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15840,7 +15760,7 @@
 			)
 		)
 		(property "Value" "1u BQ IN"
-			(at 445.135 237.49 0)
+			(at 431.165 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15851,7 +15771,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 444.5 234.95 0)
+			(at 430.53 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15862,7 +15782,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 444.5 234.95 0)
+			(at 430.53 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15873,7 +15793,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 444.5 234.95 0)
+			(at 430.53 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15898,11 +15818,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C36")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 524.51 234.95 0)
+		(at 529.59 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15910,7 +15836,7 @@
 		(dnp no)
 		(uuid "85d6ea1d-bd3b-421d-b654-cc5d19533eb3")
 		(property "Reference" "C39"
-			(at 525.145 232.41 0)
+			(at 530.225 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15921,7 +15847,7 @@
 			)
 		)
 		(property "Value" "10u TPS IN"
-			(at 525.145 237.49 0)
+			(at 530.225 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15932,7 +15858,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 524.51 234.95 0)
+			(at 529.59 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15943,7 +15869,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 524.51 234.95 0)
+			(at 529.59 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15954,7 +15880,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 524.51 234.95 0)
+			(at 529.59 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15975,6 +15901,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C39")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C39")
 					(unit 1)
 				)
@@ -16058,11 +15990,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "R18")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 609.6 270.51 0)
+		(at 614.68 330.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16070,7 +16008,7 @@
 		(dnp no)
 		(uuid "8d42e3b9-851b-4ed6-8372-bc38f66d67ff")
 		(property "Reference" "C43"
-			(at 610.235 267.97 0)
+			(at 615.315 327.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16081,7 +16019,7 @@
 			)
 		)
 		(property "Value" "100n nRF VDD"
-			(at 610.235 273.05 0)
+			(at 615.315 332.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16092,7 +16030,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 609.6 270.51 0)
+			(at 614.68 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16103,7 +16041,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 609.6 270.51 0)
+			(at 614.68 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16114,7 +16052,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 609.6 270.51 0)
+			(at 614.68 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16135,6 +16073,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C43")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C43")
 					(unit 1)
 				)
@@ -16220,6 +16164,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C62")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -16295,6 +16245,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "L4")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "L4")
 					(unit 1)
 				)
@@ -16376,6 +16332,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C68")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C68")
 					(unit 1)
 				)
@@ -16647,6 +16609,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U27")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -16722,6 +16690,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "R20")
 					(unit 1)
 				)
@@ -16805,6 +16779,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "Y2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -16880,6 +16860,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "R22")
 					(unit 1)
 				)
@@ -16963,11 +16949,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "L7")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 495.3 234.95 0)
+		(at 480.06 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16975,7 +16967,7 @@
 		(dnp no)
 		(uuid "be634389-785f-46ad-9ba4-3d1128ee649d")
 		(property "Reference" "C38"
-			(at 495.935 232.41 0)
+			(at 480.695 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16986,7 +16978,7 @@
 			)
 		)
 		(property "Value" "1u BAT"
-			(at 495.935 237.49 0)
+			(at 480.695 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16997,7 +16989,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 495.3 234.95 0)
+			(at 480.06 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17008,7 +17000,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 495.3 234.95 0)
+			(at 480.06 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17019,7 +17011,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 495.3 234.95 0)
+			(at 480.06 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17040,6 +17032,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C38")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C38")
 					(unit 1)
 				)
@@ -17125,6 +17123,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C64")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -17202,6 +17206,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C58")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C58")
 					(unit 1)
 				)
@@ -17287,11 +17297,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C55")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 624.84 270.51 0)
+		(at 629.92 330.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17299,7 +17315,7 @@
 		(dnp no)
 		(uuid "cb483dc1-1d0d-4158-90cb-bd1fe5f00a83")
 		(property "Reference" "C44"
-			(at 625.475 267.97 0)
+			(at 630.555 327.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17310,7 +17326,7 @@
 			)
 		)
 		(property "Value" "100n nRF VDDH"
-			(at 625.475 273.05 0)
+			(at 630.555 332.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17321,7 +17337,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 624.84 270.51 0)
+			(at 629.92 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17332,7 +17348,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 624.84 270.51 0)
+			(at 629.92 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17343,7 +17359,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 624.84 270.51 0)
+			(at 629.92 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17364,6 +17380,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C44")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C44")
 					(unit 1)
 				)
@@ -17449,11 +17471,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C65")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 505.46 270.51 0)
+		(at 505.46 330.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17461,7 +17489,7 @@
 		(dnp no)
 		(uuid "d3354e62-7367-4003-8238-c4a56b945d2e")
 		(property "Reference" "C41"
-			(at 506.095 267.97 0)
+			(at 506.095 327.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17472,7 +17500,7 @@
 			)
 		)
 		(property "Value" "100n STM VDD"
-			(at 506.095 273.05 0)
+			(at 506.095 332.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17483,7 +17511,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 505.46 270.51 0)
+			(at 505.46 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17494,7 +17522,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 505.46 270.51 0)
+			(at 505.46 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17505,7 +17533,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 505.46 270.51 0)
+			(at 505.46 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17526,6 +17554,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C41")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C41")
 					(unit 1)
 				)
@@ -17607,6 +17641,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C60")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C60")
 					(unit 1)
 				)
@@ -17699,6 +17739,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "J10")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -17780,6 +17826,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C46")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -17857,6 +17909,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C56")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C56")
 					(unit 1)
 				)
@@ -18117,6 +18175,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U28")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -18198,11 +18262,17 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "C69")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 709.93 234.95 0)
+		(at 709.93 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18210,7 +18280,7 @@
 		(dnp no)
 		(uuid "e825411d-1237-4190-86bb-44f52a6777dc")
 		(property "Reference" "C52"
-			(at 710.565 232.41 0)
+			(at 710.565 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18221,7 +18291,7 @@
 			)
 		)
 		(property "Value" "100n OLED VCC"
-			(at 710.565 237.49 0)
+			(at 710.565 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18232,7 +18302,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 709.93 234.95 0)
+			(at 709.93 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18243,7 +18313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 709.93 234.95 0)
+			(at 709.93 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18254,7 +18324,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 709.93 234.95 0)
+			(at 709.93 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18275,6 +18345,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C52")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C52")
 					(unit 1)
 				)
@@ -18357,6 +18433,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "J7")
 					(unit 1)
 				)
@@ -18452,80 +18534,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 789.94 170.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ed06da10-d0a2-4d27-b8a2-3a8bb2df4d5c")
-		(property "Reference" "#FLG0106"
-			(at 789.94 168.275 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG RX GND"
-			(at 789.94 166.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 789.94 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 789.94 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 789.94 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "40f030b0-20e8-4b8a-8b96-4935c0e2d407")
-		)
-		(instances
-			(project "kaboard-right"
-				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
-					(reference "#FLG0106")
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U33")
 					(unit 1)
 				)
 			)
@@ -18533,7 +18544,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 519.43 270.51 0)
+		(at 519.43 330.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18541,7 +18552,7 @@
 		(dnp no)
 		(uuid "f26ce25b-8dce-443f-89dd-598e1169601f")
 		(property "Reference" "C42"
-			(at 520.065 267.97 0)
+			(at 520.065 327.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18552,7 +18563,7 @@
 			)
 		)
 		(property "Value" "100n STM VDDA"
-			(at 520.065 273.05 0)
+			(at 520.065 332.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18563,7 +18574,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 519.43 270.51 0)
+			(at 519.43 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18574,7 +18585,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 519.43 270.51 0)
+			(at 519.43 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18585,7 +18596,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 519.43 270.51 0)
+			(at 519.43 330.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18606,6 +18617,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "C42")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "C42")
 					(unit 1)
 				)
@@ -18698,6 +18715,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U32")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -18775,80 +18798,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 49.53 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f7f76b99-70fa-4ddd-b11c-b177f382b742")
-		(property "Reference" "#FLG0101"
-			(at 49.53 158.115 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG L USB VBUS"
-			(at 49.53 156.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 49.53 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "a4ba7c84-9dde-44fa-83d8-32e3d00b305d")
-		)
-		(instances
-			(project "kaboard-right"
-				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
-					(reference "#FLG0101")
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "#FLG0104")
 					(unit 1)
 				)
 			)
@@ -18927,6 +18879,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "R26")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "R26")
 					(unit 1)
 				)
@@ -19025,6 +18983,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U31")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19051,7 +19015,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 420.37 219.71 0)
 			(hide yes)
 			(effects
@@ -19085,6 +19049,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "R15")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19111,7 +19081,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 435.61 219.71 0)
 			(hide yes)
 			(effects
@@ -19145,6 +19115,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "R16")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19171,7 +19147,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 464.82 219.71 0)
 			(hide yes)
 			(effects
@@ -19201,6 +19177,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "R17")
 					(unit 1)
 				)
@@ -19265,6 +19247,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U34")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19321,6 +19309,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U34")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U34")
 					(unit 2)
 				)
@@ -19385,6 +19379,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U35")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19441,6 +19441,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U35")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U35")
 					(unit 2)
 				)
@@ -19505,6 +19511,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U36")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19561,6 +19573,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U36")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U36")
 					(unit 2)
 				)
@@ -19625,6 +19643,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U37")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19681,6 +19705,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U37")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U37")
 					(unit 2)
 				)
@@ -19745,6 +19775,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U38")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19801,6 +19837,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U38")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U38")
 					(unit 2)
 				)
@@ -19865,6 +19907,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U39")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -19921,6 +19969,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U39")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U39")
 					(unit 2)
 				)
@@ -19985,6 +20039,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U40")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20041,6 +20101,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U40")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U40")
 					(unit 2)
 				)
@@ -20105,6 +20171,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U41")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20161,6 +20233,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U41")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U41")
 					(unit 2)
 				)
@@ -20225,6 +20303,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U42")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20281,6 +20365,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U42")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U42")
 					(unit 2)
 				)
@@ -20345,6 +20435,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U43")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20401,6 +20497,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U43")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U43")
 					(unit 2)
 				)
@@ -20465,6 +20567,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U44")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20521,6 +20629,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U44")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U44")
 					(unit 2)
 				)
@@ -20585,6 +20699,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U45")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20641,6 +20761,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U45")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U45")
 					(unit 2)
 				)
@@ -20705,6 +20831,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U46")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20761,6 +20893,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U46")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U46")
 					(unit 2)
 				)
@@ -20825,6 +20963,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U47")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -20881,6 +21025,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U47")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U47")
 					(unit 2)
 				)
@@ -20945,6 +21095,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U48")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -21001,6 +21157,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U48")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U48")
 					(unit 2)
 				)
@@ -21065,6 +21227,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U49")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -21121,6 +21289,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U49")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U49")
 					(unit 2)
 				)
@@ -21185,6 +21359,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U50")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -21241,6 +21421,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U50")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U50")
 					(unit 2)
 				)
@@ -21305,6 +21491,12 @@
 					(unit 1)
 				)
 			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
+					(reference "U51")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -21361,6 +21553,12 @@
 		(instances
 			(project "kaboard-right"
 				(path "/59fc09ba-5175-4091-9ec9-eda9e4d1c527"
+					(reference "U51")
+					(unit 2)
+				)
+			)
+			(project "hierarchy-importer"
+				(path "/8cc9d7d2-f9c2-4572-b7e0-5884f6067313/6e361afb-61a4-464c-b89d-82f18717e80c"
 					(reference "U51")
 					(unit 2)
 				)
